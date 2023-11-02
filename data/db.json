@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "title": "Learn js",
+      "id": 2,
+      "details": "this is details",
+      "completed": true
+    },
+    {
+      "title": "Learn Vue.js",
+      "details": "im fucking learning it you mother fucker \n",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "title": "new",
+      "details": "",
+      "completed": false,
+      "id": 4
+    }
+  ]
+}
