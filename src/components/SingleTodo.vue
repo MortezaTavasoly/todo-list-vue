@@ -1,7 +1,7 @@
 <template>
   <div class="single-todo" :class="{ completed: todo.completed }">
-    <div class="title" @click="handleShowDetails">
-      <h3>{{ todo.title }}</h3>
+    <div class="title-details" @click="handleShowDetails">
+      <h3 class="title">{{ todo.title }}</h3>
       <p class="details" v-if="showDetails">
         {{ todo.details }}
       </p>
@@ -11,8 +11,8 @@
       <router-link :to="{ name: 'Edit', params: { id: todo.id } }"
         ><p>edit</p></router-link
       >
-      <p @click="handleRemove(todo.id)">delete</p>
-      <p @click="handlecomplete(todo)">complete</p>
+      <p @click="handleRemove(todo.id)" class="del-butt">delete</p>
+      <p @click="handlecomplete(todo)" class="check-butt">complete</p>
     </div>
   </div>
 </template>
@@ -66,6 +66,20 @@ export default {
 
 .completed {
   border-left: 3px solid green;
+  transition: 0.3s ease;
+
+  background-color: #858585;
+}
+.completed .check-butt {
+  background-color: greenyellow;
+}
+.check-butt:hover {
+  background-color: green;
+  color: white;
+}
+.del-butt:hover {
+  color: white;
+  background-color: red;
 }
 .details {
   margin-left: 30px;
@@ -75,22 +89,28 @@ export default {
   justify-content: center;
   display: flex;
 }
-.btns p:hover {
-  color: white;
-  cursor: pointer;
-  background-color: rgb(70, 70, 143);
-}
+
 .btns a {
   text-decoration: none;
+}
+.btns a p:hover {
+  color: white;
+  background-color: rgb(70, 70, 143);
 }
 .btns p {
   color: #555;
   margin-right: 10px;
   padding: 5px 10px;
+  transition: 0.3s ease;
+
+  cursor: pointer;
   background-color: rgb(185, 223, 248);
 }
-h3 {
+.title {
   padding: 10px 20px;
   cursor: pointer;
+}
+.completed .title {
+  text-decoration: line-through;
 }
 </style>

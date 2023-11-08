@@ -1,6 +1,6 @@
 <template>
   <form class="edit-todos" @submit.prevent="handleEdit">
-    <label>title: <input type="text" v-model="title" /></label>
+    <label>title: <input type="text" v-model="title" required /></label>
     <label
       >details: <textarea cols="30" rows="10" v-model="details"></textarea>
     </label>

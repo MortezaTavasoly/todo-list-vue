@@ -70,4 +70,15 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
+button {
+  margin: 20px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  background-color: silver;
+}
 </style>
