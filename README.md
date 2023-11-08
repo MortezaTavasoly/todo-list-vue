@@ -1,5 +1,7 @@
 # todo-list
-
+```
+this is a simple todo list with vue.js
+```
 ## Project setup
 ```
 npm install
